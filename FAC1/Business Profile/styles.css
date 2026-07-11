@@ -5,12 +5,9 @@
 ========================================== */
 
 :root {
-  --background-image:
-    url("https://images.unsplash.com/photo-1561758033-d89a9ad46330?auto=format&fit=crop&w=1800&q=90");
+  --background-image: url("Images/BG\ Image.jpg");
 
-  --character-image:
-    url("https://placehold.co/900x1400/34363a/f4d9b1?text=Character+Portrait");
-
+  --character-image: url("Images/Character\ Avatar\ 03.png");
 
   /* ========================================
      COLOUR PALETTE
@@ -38,7 +35,6 @@
   --panel-width: 43%;
   --transition: 220ms ease;
 }
-
 
 /* ==========================================
    RESET
@@ -77,7 +73,6 @@ img {
   max-width: 100%;
 }
 
-
 /* ==========================================
    PAGE LAYOUT
 ========================================== */
@@ -88,7 +83,6 @@ img {
   width: 100%;
   min-height: 100vh;
 }
-
 
 /* ==========================================
    LEFT VISUAL PANEL
@@ -158,15 +152,13 @@ img {
   inset: 0;
   pointer-events: none;
   opacity: 0.08;
-  background-image:
-    repeating-linear-gradient(
-      0deg,
-      transparent 0,
-      transparent 3px,
-      rgba(255, 255, 255, 0.12) 4px
-    );
+  background-image: repeating-linear-gradient(
+    0deg,
+    transparent 0,
+    transparent 3px,
+    rgba(255, 255, 255, 0.12) 4px
+  );
 }
-
 
 /* ==========================================
    VISUAL FRAME
@@ -234,7 +226,6 @@ img {
   transform: rotate(180deg);
 }
 
-
 /* ==========================================
    VISUAL CATEGORY
 ========================================== */
@@ -253,12 +244,11 @@ img {
 
   border: 1px solid rgba(233, 196, 106, 0.32);
   border-left: 3px solid var(--gold-300);
-  background:
-    linear-gradient(
-      90deg,
-      rgba(10, 16, 25, 0.92),
-      rgba(10, 16, 25, 0.58)
-    );
+  background: linear-gradient(
+    90deg,
+    rgba(10, 16, 25, 0.92),
+    rgba(10, 16, 25, 0.58)
+  );
   backdrop-filter: blur(10px);
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.28);
 }
@@ -274,12 +264,11 @@ img {
   border-radius: 50%;
 
   color: var(--gold-200);
-  background:
-    radial-gradient(
-      circle,
-      rgba(233, 196, 106, 0.28),
-      rgba(233, 196, 106, 0.05)
-    );
+  background: radial-gradient(
+    circle,
+    rgba(233, 196, 106, 0.28),
+    rgba(233, 196, 106, 0.05)
+  );
 }
 
 .category-label,
@@ -302,7 +291,6 @@ img {
   font-size: 0.84rem;
   letter-spacing: 0.05em;
 }
-
 
 /* ==========================================
    CHARACTER
@@ -330,13 +318,12 @@ img {
   height: 76%;
 
   border-radius: 50%;
-  background:
-    radial-gradient(
-      circle,
-      rgba(255, 217, 151, 0.3),
-      rgba(220, 153, 63, 0.08) 44%,
-      transparent 70%
-    );
+  background: radial-gradient(
+    circle,
+    rgba(255, 217, 151, 0.3),
+    rgba(220, 153, 63, 0.08) 44%,
+    transparent 70%
+  );
   filter: blur(10px);
 }
 
@@ -348,12 +335,9 @@ img {
 
   content: var(--character-image);
 
-  filter:
-    drop-shadow(-28px 22px 25px rgba(0, 0, 0, 0.42))
-    saturate(0.96)
+  filter: drop-shadow(-28px 22px 25px rgba(0, 0, 0, 0.42)) saturate(0.96)
     contrast(1.03);
 }
-
 
 /* ==========================================
    HERO TITLE
@@ -384,21 +368,11 @@ img {
 .hero-title__ornament span {
   flex: 1;
   height: 1px;
-  background:
-    linear-gradient(
-      90deg,
-      transparent,
-      var(--gold-300)
-    );
+  background: linear-gradient(90deg, transparent, var(--gold-300));
 }
 
 .hero-title__ornament span:last-child {
-  background:
-    linear-gradient(
-      90deg,
-      var(--gold-300),
-      transparent
-    );
+  background: linear-gradient(90deg, var(--gold-300), transparent);
 }
 
 .hero-title__ornament i {
@@ -445,7 +419,6 @@ img {
   font-size: 0.5rem;
 }
 
-
 /* ==========================================
    CLIENT CARD
 ========================================== */
@@ -472,12 +445,11 @@ img {
   border-radius: 50%;
 
   color: var(--gold-100);
-  background:
-    linear-gradient(
-      145deg,
-      rgba(233, 196, 106, 0.32),
-      rgba(41, 28, 17, 0.82)
-    );
+  background: linear-gradient(
+    145deg,
+    rgba(233, 196, 106, 0.32),
+    rgba(41, 28, 17, 0.82)
+  );
 
   font-family: "Cinzel", serif;
   font-size: 0.82rem;
@@ -507,7 +479,6 @@ img {
   font-weight: 600;
 }
 
-
 /* ==========================================
    VISUAL QUOTE
 ========================================== */
@@ -518,17 +489,12 @@ img {
   right: 6%;
   bottom: 6%;
 
-  width: min(310px, 31%);
+  width: max(310px, 31%);
   margin: 0;
   padding: 13px 15px 13px 38px;
 
   border-right: 2px solid var(--gold-300);
-  background:
-    linear-gradient(
-      90deg,
-      transparent,
-      rgba(7, 11, 17, 0.62)
-    );
+  background: linear-gradient(90deg, transparent, rgba(7, 11, 17, 0.62));
 
   color: rgba(255, 255, 255, 0.76);
   font-size: 0.72rem;
@@ -551,7 +517,6 @@ img {
   line-height: 1;
   opacity: 0.55;
 }
-
 
 /* ==========================================
    RIGHT INFORMATION PANEL
@@ -590,15 +555,14 @@ img {
   left: -6px;
   bottom: 0;
   width: 5px;
-  background:
-    linear-gradient(
-      180deg,
-      transparent,
-      var(--gold-400) 15%,
-      var(--gold-600) 50%,
-      var(--gold-400) 85%,
-      transparent
-    );
+  background: linear-gradient(
+    180deg,
+    transparent,
+    var(--gold-400) 15%,
+    var(--gold-600) 50%,
+    var(--gold-400) 85%,
+    transparent
+  );
   opacity: 0.72;
 }
 
@@ -629,7 +593,6 @@ img {
   background: var(--gold-500);
 }
 
-
 /* ==========================================
    MOBILE BRAND
 ========================================== */
@@ -637,7 +600,6 @@ img {
 .mobile-brand {
   display: none;
 }
-
 
 /* ==========================================
    PROFILE HEADER
@@ -664,12 +626,11 @@ img {
   border-radius: 50%;
 
   color: var(--gold-100);
-  background:
-    radial-gradient(
-      circle,
-      rgba(233, 196, 106, 0.2),
-      rgba(10, 16, 25, 0.72) 68%
-    );
+  background: radial-gradient(
+    circle,
+    rgba(233, 196, 106, 0.2),
+    rgba(10, 16, 25, 0.72) 68%
+  );
 
   font-family: "Cinzel", serif;
   font-size: 1.15rem;
@@ -725,7 +686,6 @@ img {
   line-height: 1.55;
 }
 
-
 /* ==========================================
    QUICK DETAILS
 ========================================== */
@@ -745,12 +705,11 @@ img {
   padding: 11px 10px;
 
   border: 1px solid rgba(233, 196, 106, 0.13);
-  background:
-    linear-gradient(
-      145deg,
-      rgba(255, 255, 255, 0.04),
-      rgba(255, 255, 255, 0.012)
-    );
+  background: linear-gradient(
+    145deg,
+    rgba(255, 255, 255, 0.04),
+    rgba(255, 255, 255, 0.012)
+  );
 }
 
 .quick-detail__icon {
@@ -783,7 +742,6 @@ img {
   font-weight: 600;
 }
 
-
 /* ==========================================
    SECTION HEADING
 ========================================== */
@@ -798,21 +756,11 @@ img {
 .section-heading span {
   flex: 1;
   height: 1px;
-  background:
-    linear-gradient(
-      90deg,
-      transparent,
-      rgba(233, 196, 106, 0.32)
-    );
+  background: linear-gradient(90deg, transparent, rgba(233, 196, 106, 0.32));
 }
 
 .section-heading span:last-child {
-  background:
-    linear-gradient(
-      90deg,
-      rgba(233, 196, 106, 0.32),
-      transparent
-    );
+  background: linear-gradient(90deg, rgba(233, 196, 106, 0.32), transparent);
 }
 
 .section-heading h3 {
@@ -825,7 +773,6 @@ img {
   text-align: center;
   text-transform: uppercase;
 }
-
 
 /* ==========================================
    STORY ACCORDION
@@ -841,12 +788,11 @@ img {
   overflow: hidden;
 
   border: 1px solid rgba(233, 196, 106, 0.14);
-  background:
-    linear-gradient(
-      145deg,
-      rgba(255, 255, 255, 0.045),
-      rgba(255, 255, 255, 0.012)
-    );
+  background: linear-gradient(
+    145deg,
+    rgba(255, 255, 255, 0.045),
+    rgba(255, 255, 255, 0.012)
+  );
 
   transition:
     border-color var(--transition),
@@ -863,13 +809,12 @@ img {
 
   width: 2px;
 
-  background:
-    linear-gradient(
-      180deg,
-      transparent,
-      var(--gold-300),
-      transparent
-    );
+  background: linear-gradient(
+    180deg,
+    transparent,
+    var(--gold-300),
+    transparent
+  );
 
   opacity: 0;
   transition: opacity var(--transition);
@@ -877,29 +822,26 @@ img {
 
 .story-card:hover {
   border-color: rgba(233, 196, 106, 0.33);
-  background:
-    linear-gradient(
-      145deg,
-      rgba(255, 255, 255, 0.065),
-      rgba(233, 196, 106, 0.025)
-    );
+  background: linear-gradient(
+    145deg,
+    rgba(255, 255, 255, 0.065),
+    rgba(233, 196, 106, 0.025)
+  );
 }
 
 .story-card[open] {
   border-color: rgba(233, 196, 106, 0.37);
-  background:
-    linear-gradient(
-      145deg,
-      rgba(255, 255, 255, 0.065),
-      rgba(233, 196, 106, 0.035)
-    );
+  background: linear-gradient(
+    145deg,
+    rgba(255, 255, 255, 0.065),
+    rgba(233, 196, 106, 0.035)
+  );
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.19);
 }
 
 .story-card[open]::before {
   opacity: 1;
 }
-
 
 /* ==========================================
    STORY SUMMARY
@@ -1025,7 +967,6 @@ img {
   transform: rotate(0deg);
 }
 
-
 /* ==========================================
    STORY CONTENT
 ========================================== */
@@ -1045,12 +986,7 @@ img {
   left: 32px;
   bottom: 20px;
   width: 1px;
-  background:
-    linear-gradient(
-      180deg,
-      rgba(233, 196, 106, 0.36),
-      transparent
-    );
+  background: linear-gradient(180deg, rgba(233, 196, 106, 0.36), transparent);
 }
 
 .story-card__body p {
@@ -1060,7 +996,6 @@ img {
 .story-card__body p:last-child {
   margin-bottom: 0;
 }
-
 
 /* ==========================================
    VISION CARD
@@ -1109,7 +1044,6 @@ img {
   line-height: 1.75;
 }
 
-
 /* ==========================================
    FOOTER
 ========================================== */
@@ -1138,12 +1072,11 @@ img {
   font-size: 0.42rem;
 }
 
-
 /* ==========================================
    RESPONSIVE: SMALL DESKTOP
 ========================================== */
 
-@media (max-width: 1250px) {
+@media (max-width: 1050px) {
   :root {
     --panel-width: 47%;
   }
@@ -1168,7 +1101,6 @@ img {
     padding: 9px 11px;
   }
 }
-
 
 /* ==========================================
    RESPONSIVE: TABLET
@@ -1203,15 +1135,14 @@ img {
     left: 0;
     width: 100%;
     height: 4px;
-    background:
-      linear-gradient(
-        90deg,
-        transparent,
-        var(--gold-400) 25%,
-        var(--gold-300) 50%,
-        var(--gold-400) 75%,
-        transparent
-      );
+    background: linear-gradient(
+      90deg,
+      transparent,
+      var(--gold-400) 25%,
+      var(--gold-300) 50%,
+      var(--gold-400) 75%,
+      transparent
+    );
   }
 
   .information-panel__content {
@@ -1253,7 +1184,6 @@ img {
   }
 }
 
-
 /* ==========================================
    RESPONSIVE: MOBILE
 ========================================== */
@@ -1287,7 +1217,6 @@ img {
   }
 
   .character {
-    right: -31%;
     width: 145%;
     height: 88%;
   }
@@ -1375,7 +1304,6 @@ img {
   }
 }
 
-
 /* ==========================================
    VERY SMALL MOBILE
 ========================================== */
@@ -1407,7 +1335,6 @@ img {
   }
 }
 
-
 /* ==========================================
    ACCESSIBILITY
 ========================================== */
@@ -1423,5 +1350,297 @@ img {
   *::after {
     scroll-behavior: auto !important;
     transition-duration: 0.01ms !important;
+  }
+}
+/* ==========================================
+   FACGLE HOME + DYNAMIC SEARCH
+========================================== */
+[hidden] {
+  display: none !important;
+}
+.search-home {
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  background: #fff;
+  color: #202124;
+  font-family: Arial, sans-serif;
+}
+.home-topbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 22px 28px;
+  color: #5f6368;
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+}
+.home-search-area {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 20px 100px;
+}
+.facgle-logo {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  font-size: clamp(4rem, 9vw, 6.4rem);
+  font-weight: 600;
+  letter-spacing: -0.08em;
+  line-height: 1;
+}
+.facgle-logo span:nth-child(1),
+.facgle-logo span:nth-child(4) {
+  color: #4285f4;
+}
+.facgle-logo span:nth-child(2),
+.facgle-logo span:nth-child(6) {
+  color: #ea4335;
+}
+.facgle-logo span:nth-child(3) {
+  color: #fbbc05;
+}
+.facgle-logo span:nth-child(5) {
+  color: #34a853;
+}
+.home-tagline {
+  margin: 15px 0 30px;
+  color: #5f6368;
+  font-size: 0.95rem;
+}
+.search-shell {
+  position: relative;
+  width: 100%;
+}
+.home-search-shell {
+  max-width: 620px;
+}
+.search-field {
+  display: flex;
+  align-items: center;
+  min-height: 48px;
+  border: 1px solid #dfe1e5;
+  border-radius: 24px;
+  background: #fff;
+  box-shadow: none;
+  transition:
+    box-shadow 0.18s,
+    border-color 0.18s;
+}
+.search-field:focus-within,
+.home-search-shell:has(.suggestions:not([hidden])) .search-field {
+  border-color: transparent;
+  box-shadow: 0 1px 6px rgba(32, 33, 36, 0.28);
+}
+.search-leading-icon {
+  margin-left: 16px;
+  color: #9aa0a6;
+  font-size: 1.25rem;
+}
+.search-field input {
+  min-width: 0;
+  flex: 1;
+  border: 0;
+  outline: 0;
+  padding: 12px 12px;
+  color: #202124;
+  background: transparent;
+  font-size: 1rem;
+}
+.search-field input::-webkit-search-cancel-button {
+  display: none;
+}
+.search-submit {
+  width: 42px;
+  height: 42px;
+  margin-right: 3px;
+  border: 0;
+  border-radius: 50%;
+  color: #4285f4;
+  background: transparent;
+  cursor: pointer;
+  font-size: 1.1rem;
+}
+.search-submit:hover {
+  background: #f1f3f4;
+}
+.suggestions {
+  position: absolute;
+  z-index: 100;
+  top: calc(100% - 1px);
+  left: 0;
+  right: 0;
+  overflow: hidden;
+  padding: 8px 0;
+  border-top: 1px solid #e8eaed;
+  border-radius: 0 0 24px 24px;
+  background: #fff;
+  box-shadow: 0 4px 6px rgba(32, 33, 36, 0.28);
+}
+.search-shell:has(.suggestions:not([hidden])) .search-field {
+  border-radius: 24px 24px 0 0;
+}
+.suggestion-item {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  width: 100%;
+  padding: 10px 18px;
+  border: 0;
+  color: #202124;
+  background: transparent;
+  text-align: left;
+  cursor: pointer;
+}
+.suggestion-item:hover,
+.suggestion-item.is-selected {
+  background: #f1f3f4;
+}
+.suggestion-icon {
+  color: #70757a;
+  font-size: 1.2rem;
+}
+.suggestion-copy {
+  min-width: 0;
+}
+.suggestion-copy strong,
+.suggestion-copy small {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.suggestion-copy strong {
+  font-size: 0.93rem;
+  font-weight: 500;
+}
+.suggestion-copy small {
+  margin-top: 2px;
+  color: #70757a;
+  font-size: 0.74rem;
+}
+.suggestion-empty {
+  padding: 15px 20px;
+  color: #70757a;
+  font-size: 0.88rem;
+}
+.home-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 28px;
+}
+.home-actions button {
+  padding: 10px 16px;
+  border: 1px solid #f8f9fa;
+  border-radius: 4px;
+  color: #3c4043;
+  background: #f8f9fa;
+  cursor: pointer;
+}
+.home-actions button:hover {
+  border-color: #dadce0;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+}
+.data-status {
+  margin-top: 24px;
+  color: #70757a;
+  font-size: 0.78rem;
+}
+.data-status.is-error {
+  max-width: 620px;
+  color: #b3261e;
+  text-align: center;
+  line-height: 1.5;
+}
+.home-footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 16px 30px;
+  color: #70757a;
+  background: #f2f2f2;
+  border-top: 1px solid #dadce0;
+  font-size: 0.78rem;
+}
+.visual-panel__category {
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+.profile-search-bar {
+  position: absolute;
+  z-index: 80;
+  top: 38px;
+  left: 40px;
+  width: min(250px, calc(100% - 40px));
+}
+.profile-search-shell .search-field {
+  min-height: 40px;
+  border-color: rgba(233, 196, 106, 0.25);
+  border-radius: 21px;
+  background: rgba(8, 13, 20, 0.78);
+  backdrop-filter: blur(10px);
+}
+.profile-search-shell .search-field input {
+  padding: 9px 8px;
+  color: var(--cream);
+  font-size: 0.8rem;
+}
+.profile-search-shell .search-leading-icon {
+  margin-left: 13px;
+  color: var(--gold-300);
+}
+.profile-search-shell .search-submit {
+  width: 35px;
+  height: 35px;
+  color: var(--gold-300);
+}
+.profile-search-shell .search-submit:hover {
+  background: rgba(233, 196, 106, 0.1);
+}
+.suggestions--dark {
+  border-color: rgba(233, 196, 106, 0.2);
+  background: #111b28;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.42);
+}
+.suggestions--dark .suggestion-item {
+  color: var(--cream);
+}
+.suggestions--dark .suggestion-item:hover,
+.suggestions--dark .suggestion-item.is-selected {
+  background: rgba(233, 196, 106, 0.1);
+}
+.suggestions--dark .suggestion-icon {
+  color: var(--gold-300);
+}
+.suggestions--dark .suggestion-copy small,
+.suggestions--dark .suggestion-empty {
+  color: var(--cream-muted);
+}
+.profile-active .information-panel__content {
+  padding-top: 78px;
+}
+@media (max-width: 950px) {
+  .profile-active .information-panel__content {
+    padding-top: 25px;
+  }
+}
+@media (max-width: 650px) {
+  .home-topbar,
+  .home-footer {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+  .home-topbar span:last-child,
+  .home-footer span:last-child {
+    display: none;
+  }
+  .home-search-area {
+    padding-bottom: 70px;
+  }
+  .home-actions {
+    display: none;
+  }
+  .suggestion-copy small {
+    max-width: 70vw;
   }
 }

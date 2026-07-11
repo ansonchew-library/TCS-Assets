@@ -1,394 +1,71 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0"
-  />
-
-  <meta
-    name="description"
-    content="Truck Stop café business portfolio and client story."
-  />
-
-  <title>Truck Stop | Business Portfolio</title>
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Search and explore FAC business client profiles." />
+  <title>Facgle Search | Business Portfolio</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-
-  <link
-    href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap"
-    rel="stylesheet"
-  />
-
-  <link
-    rel="stylesheet"
-    href="styles.css"
-  />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <script src="app.js" defer></script>
 </head>
-
 <body>
-  <main class="portfolio-page">
+  <main id="homePage" class="search-home">
+    <header class="home-topbar"><span>APPLIED COMPUTING</span><span>Business Client Search</span></header>
+    <section class="home-search-area">
+      <h1 class="facgle-logo" aria-label="Facgle Search"><span>F</span><span>a</span><span>c</span><span>g</span><span>l</span><span>e</span></h1>
+      <p class="home-tagline">Find your business client profile</p>
+      <div class="search-shell home-search-shell">
+        <div class="search-field">
+          <span class="search-leading-icon">⌕</span>
+          <input id="homeSearchInput" type="search" autocomplete="off" placeholder="Search by business name, industry or keyword" aria-label="Search businesses" />
+          <button id="homeSearchButton" class="search-submit" type="button" aria-label="Search">➜</button>
+        </div>
+        <div id="homeSuggestions" class="suggestions" hidden></div>
+      </div>
+      <div class="home-actions"><button type="button" onclick="document.querySelector('#homeSearchInput').focus()">Facgle Search</button><button type="button" onclick="document.querySelector('#homeSearchInput').value=''; document.querySelector('#homeSearchInput').focus()">Clear Search</button></div>
+      <p id="dataStatus" class="data-status">Loading business profiles…</p>
+    </section>
+    <footer class="home-footer"><span>Australia</span><span>FAC Business Portfolio</span></footer>
+  </main>
 
-    <!-- ======================================
-         LEFT VISUAL AREA
-    ======================================= -->
+  <main id="profilePage" class="portfolio-page" hidden>
     <section class="visual-panel">
-
-      <div class="visual-panel__background"></div>
-      <div class="visual-panel__shade"></div>
-      <div class="visual-panel__light"></div>
-      <div class="visual-panel__texture"></div>
-
-      <!-- Decorative border -->
-      <div class="visual-frame" aria-hidden="true">
-        <span class="visual-frame__corner visual-frame__corner--top-left"></span>
-        <span class="visual-frame__corner visual-frame__corner--top-right"></span>
-        <span class="visual-frame__corner visual-frame__corner--bottom-left"></span>
-        <span class="visual-frame__corner visual-frame__corner--bottom-right"></span>
-      </div>
-
-      <!-- Top category -->
-      <div class="visual-panel__category">
-        <span class="category-icon">★</span>
-
-        <div>
-          <span class="category-label">Business Portfolio</span>
-          <strong class="category-name">Hospitality Venture</strong>
+      <div id="profileBackground" class="visual-panel__background"></div><div class="visual-panel__shade"></div><div class="visual-panel__light"></div><div class="visual-panel__texture"></div>
+      <div class="visual-frame" aria-hidden="true"><span class="visual-frame__corner visual-frame__corner--top-left"></span><span class="visual-frame__corner visual-frame__corner--top-right"></span><span class="visual-frame__corner visual-frame__corner--bottom-left"></span><span class="visual-frame__corner visual-frame__corner--bottom-right"></span></div>
+      <div class="profile-search-bar">
+        <div class="search-shell profile-search-shell">
+          <div class="search-field"><span class="search-leading-icon">⌕</span><input id="profileSearchInput" type="search" autocomplete="off" placeholder="Search another business" aria-label="Search another business" /><button id="profileSearchButton" class="search-submit" type="button" aria-label="Search">➜</button></div>
+          <div id="profileSuggestions" class="suggestions suggestions--dark" hidden></div>
         </div>
-      </div>
-
-      <!-- Character portrait -->
-      <div class="character">
-        <div class="character__glow"></div>
-
-        <img
-          class="character__image"
-          src="https://placehold.co/900x1400/34363a/f4d9b1?text=Character+Portrait"
-          alt="Portrait of Jack Morrison"
-        />
-      </div>
-
-      <!-- Business title -->
-      <header class="hero-title">
-        <div class="hero-title__ornament" aria-hidden="true">
-          <span></span>
-          <i>◆</i>
-          <span></span>
-        </div>
-
-        <p class="hero-title__eyebrow">
-          American-style comfort food
-        </p>
-
-        <h1>Truck Stop</h1>
-
-        <p class="hero-title__subtitle">
-          Sydney, Australia
-        </p>
-      </header>
-
-      <!-- Client information -->
-      <div class="client-card">
-        <div class="client-card__avatar">
-          <span>JM</span>
-        </div>
-
-        <div class="client-card__content">
-          <span class="client-card__label">Founder &amp; Client</span>
-          <strong>Jack Morrison</strong>
-        </div>
-      </div>
-
-      <!-- Bottom visual quote -->
-      <blockquote class="visual-quote">
-        <span class="visual-quote__mark">“</span>
-
-        <p>
-          Great comfort food, genuine hospitality and a place
-          where everyone is welcomed like family.
-        </p>
-      </blockquote>
-
+      </div>      <div class="character"><div class="character__glow"></div><img id="clientAvatarImage" class="character__image" src="Images/Character Avatar 03.png" alt="Client character portrait" /></div>
+      <header class="hero-title"><div class="hero-title__ornament" aria-hidden="true"><span></span><i>◆</i><span></span></div><h1 id="heroBusinessName">Business</h1></header>
+      <div class="client-card"><div class="client-card__avatar"><span id="clientInitials">CL</span></div><div class="client-card__content"><span class="client-card__label">Founder &amp; Client</span><strong id="clientName">Client</strong></div></div>
+      <blockquote class="visual-quote"><span class="visual-quote__mark">“</span><p id="visualQuoteText"></p></blockquote>
     </section>
 
-
-    <!-- ======================================
-         RIGHT INFORMATION PANEL
-    ======================================= -->
     <section class="information-panel">
-
       <div class="information-panel__texture"></div>
-
       <div class="information-panel__content">
-
-        <!-- Mobile brand -->
-        <div class="mobile-brand">
-          <span>Business Portfolio</span>
-          <strong>Truck Stop</strong>
-        </div>
-
-        <!-- Introduction -->
-        <header class="profile-header">
-
-          <div class="profile-header__badge">
-            <span>TS</span>
-          </div>
-
-          <div class="profile-header__text">
-            <p class="profile-header__type">
-              Café · Startup Business
-            </p>
-
-            <h2>Truck Stop</h2>
-
-            <p class="profile-header__description">
-              Café specialising in American-style fast food.
-            </p>
-          </div>
-
-        </header>
-
-        <!-- Quick details -->
+        <div class="mobile-brand"><span>Business Portfolio</span><strong id="mobileBusinessName">Business</strong></div>
+        <header class="profile-header"><div class="profile-header__text"><p class="profile-header__type">Startup Business</p><h2 id="profileBusinessName">Business</h2><p id="businessDescription" class="profile-header__description"></p></div></header>
         <div class="quick-details">
-
-          <article class="quick-detail">
-            <span class="quick-detail__icon">◆</span>
-
-            <div>
-              <span>Industry</span>
-              <strong>Café</strong>
-            </div>
-          </article>
-
-          <article class="quick-detail">
-            <span class="quick-detail__icon">●</span>
-
-            <div>
-              <span>Location</span>
-              <strong>Sydney, Australia</strong>
-            </div>
-          </article>
-
-          <article class="quick-detail">
-            <span class="quick-detail__icon">✦</span>
-
-            <div>
-              <span>Client</span>
-              <strong>Jack Morrison</strong>
-            </div>
-          </article>
-
+          <article class="quick-detail"><span class="quick-detail__icon">◆</span><div><span>Industry</span><strong id="industryValue"></strong></div></article>
+          <article class="quick-detail"><span class="quick-detail__icon">●</span><div><span>Location</span><strong id="locationValue"></strong></div></article>
+          <article class="quick-detail"><span class="quick-detail__icon">✦</span><div><span>Client</span><strong id="clientValue"></strong></div></article>
         </div>
-
-        <!-- Section divider -->
-        <div class="section-heading">
-          <span></span>
-          <h3>Business Chronicle</h3>
-          <span></span>
-        </div>
-
-        <!-- Expandable information -->
+        <div class="section-heading"><span></span><h3>Business Chronicle</h3><span></span></div>
         <div class="story-accordion">
-
-          <!-- Business overview -->
-          <details class="story-card" open>
-            <summary class="story-card__summary">
-
-              <div class="story-card__number">
-                01
-              </div>
-
-              <div class="story-card__heading">
-                <span>Business Profile</span>
-                <h4>Business Overview</h4>
-              </div>
-
-              <span class="story-card__toggle"></span>
-
-            </summary>
-
-            <div class="story-card__body">
-              <p>
-                Truck Stop is a startup café serving authentic
-                American-style comfort food, including burgers,
-                fries, hot dogs, milkshakes and classic desserts.
-              </p>
-
-              <p>
-                We want to create a place where people can slow
-                down, enjoy generous meals and experience the
-                welcoming atmosphere of the roadside diners that
-                inspired us.
-              </p>
-
-              <p>
-                Every meal is prepared fresh, with a focus on
-                quality ingredients and friendly service.
-              </p>
-            </div>
-          </details>
-
-
-          <!-- How it started -->
-          <details class="story-card">
-            <summary class="story-card__summary">
-
-              <div class="story-card__number">
-                02
-              </div>
-
-              <div class="story-card__heading">
-                <span>Founder Story</span>
-                <h4>How It All Started</h4>
-              </div>
-
-              <span class="story-card__toggle"></span>
-
-            </summary>
-
-            <div class="story-card__body">
-              <p>
-                After spending more than twenty years driving
-                trucks across America, I found that my favourite
-                memories weren't the destinations—they were the
-                little roadside diners where everyone was
-                welcomed like family.
-              </p>
-
-              <p>
-                Those places had character, great food and
-                unforgettable stories. When I decided to leave
-                life on the road, I knew I wanted to recreate that
-                experience for others.
-              </p>
-
-              <p>
-                Truck Stop is the beginning of that dream.
-              </p>
-            </div>
-          </details>
-
-
-          <!-- Typical day -->
-          <details class="story-card">
-            <summary class="story-card__summary">
-
-              <div class="story-card__number">
-                03
-              </div>
-
-              <div class="story-card__heading">
-                <span>Daily Operations</span>
-                <h4>A Typical Day</h4>
-              </div>
-
-              <span class="story-card__toggle"></span>
-
-            </summary>
-
-            <div class="story-card__body">
-              <p>
-                Every morning starts with preparing fresh
-                ingredients before opening our doors.
-              </p>
-
-              <p>
-                Throughout the day we welcome families, office
-                workers, road trippers and friends looking for a
-                satisfying meal. Our kitchen is always busy, with
-                burgers sizzling on the grill and milkshakes being
-                made to order.
-              </p>
-
-              <p>
-                Although we're just getting started, we hope every
-                customer leaves with a smile and a reason to come
-                back.
-              </p>
-            </div>
-          </details>
-
-
-          <!-- Help -->
-          <details class="story-card">
-            <summary class="story-card__summary">
-
-              <div class="story-card__number">
-                04
-              </div>
-
-              <div class="story-card__heading">
-                <span>Creative Challenge</span>
-                <h4>Why I Need Your Help</h4>
-              </div>
-
-              <span class="story-card__toggle"></span>
-
-            </summary>
-
-            <div class="story-card__body">
-              <p>
-                We're preparing to launch our very first café, but
-                we still need a brand identity that tells our
-                story.
-              </p>
-
-              <p>
-                I want people to recognise our business before
-                they even step inside. A memorable logo and
-                website will help introduce Truck Stop to our local
-                community and encourage new customers to give us a
-                try.
-              </p>
-            </div>
-          </details>
-
-
-          <!-- Vision -->
-          <details class="story-card story-card--vision">
-            <summary class="story-card__summary">
-
-              <div class="story-card__number">
-                05
-              </div>
-
-              <div class="story-card__heading">
-                <span>Future Ambition</span>
-                <h4>Client Vision</h4>
-              </div>
-
-              <span class="story-card__toggle"></span>
-
-            </summary>
-
-            <div class="story-card__body">
-              <blockquote class="vision-quote">
-                <span>“</span>
-
-                <p>
-                  I want Truck Stop to become the place people
-                  recommend whenever someone asks where to find
-                  great comfort food and genuine hospitality.
-                </p>
-              </blockquote>
-            </div>
-          </details>
-
+          <details class="story-card" open><summary class="story-card__summary"><div class="story-card__number">01</div><div class="story-card__heading"><span>Business Profile</span><h4>Business Overview</h4></div><span class="story-card__toggle"></span></summary><div class="story-card__body"><p id="businessOverview"></p></div></details>
+          <details class="story-card"><summary class="story-card__summary"><div class="story-card__number">02</div><div class="story-card__heading"><span>Founder Story</span><h4>How It All Started</h4></div><span class="story-card__toggle"></span></summary><div class="story-card__body"><p id="howStarted"></p></div></details>
+          <details class="story-card"><summary class="story-card__summary"><div class="story-card__number">03</div><div class="story-card__heading"><span>Daily Operations</span><h4>A Typical Day</h4></div><span class="story-card__toggle"></span></summary><div class="story-card__body"><p id="typicalDay"></p></div></details>
+          <details class="story-card"><summary class="story-card__summary"><div class="story-card__number">04</div><div class="story-card__heading"><span>Creative Challenge</span><h4>Why I Need Your Help</h4></div><span class="story-card__toggle"></span></summary><div class="story-card__body"><p id="needHelp"></p></div></details>
+          <details class="story-card story-card--vision"><summary class="story-card__summary"><div class="story-card__number">05</div><div class="story-card__heading"><span>Future Ambition</span><h4>Client Vision</h4></div><span class="story-card__toggle"></span></summary><div class="story-card__body"><blockquote class="vision-quote"><span>“</span><p id="clientVision"></p></blockquote></div></details>
         </div>
-
-        <!-- Footer -->
-        <footer class="information-footer">
-          <span>Client Business Profile</span>
-          <span class="information-footer__diamond">◆</span>
-          <span>Truck Stop · Sydney</span>
-        </footer>
-
       </div>
     </section>
-
   </main>
 </body>
 </html>
